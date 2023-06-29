@@ -158,6 +158,7 @@ const bobsTotal = bobFilter.reduce((acc, curr) => acc + curr.price, 0)
 console.log(bobsTotal)
 // if you don't specific 0 for the accumulator, the first value taken from the array, which is an entire object, and we don't want that
 
-const bobTotal = purchases.filter((purchase) => purchase.owner === 'Bob').reduce((acc, curr) => acc + curr.price, 0)
+// Chaining Methods
+// const bobsTotal = purchases.filter((purchase) => purchase.owner === 'Bob').reduce((acc, curr) => acc + curr.price, 0)
 
-console.log(bobTotal)
+// console.log(bobTotal)
