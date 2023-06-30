@@ -62,14 +62,14 @@ let cities = [
 */
 
 // CODE HERE
-// const citiesEndInI = cities.filter((city) => city[city.length - 1] === 'i')
-// console.log(citiesEndInI)
+const citiesEndInI = cities.filter((city) => city[city.length - 1] === 'i')
+console.log(citiesEndInI)
 
 // In Function Form
-const citiesEndinI = cities.filter(function(city) {
-  return city[city.length - 1] === 'i'
-})
-console.log(citiesEndinI)
+// const citiesEndinI = cities.filter(function(city) {
+//   return city[city.length - 1] === 'i'
+// })
+// console.log(citiesEndinI)
 
 ////////// PROBLEM 4 //////////
 
@@ -106,6 +106,15 @@ let fruits = [
 
 // CODE HERE
 
+fruits.forEach((fruit) => {
+  if (fruit.color === "red") {
+    return console.log(`The fruit with index ${fruits.indexOf(fruit)} is an apple.`)
+  } else if (fruit.color === "orange") {
+    return console.log(`The fruit with index ${fruits.indexOf(fruit)} is an orange.`)
+  } else {
+    return console.log(`The fruit with index ${fruits.indexOf(fruit)} is neither apple nor orange.`)
+  }
+})
 
 
 /* 
@@ -119,6 +128,13 @@ let fruits = [
 */
 
 // COPY AND PASTE THE RESULT FROM YOUR CONSOLE (NODE CONSOLE IS YOUR TERMINAL) HERE (AS A MULTI LINES COMMENT)
+
+/*
+The fruit with index 0 is neither apple nor orange.
+The fruit with index 1 is an orange.
+The fruit with index 2 is neither apple nor orange.
+The fruit with index 3 is an apple.
+*/
 
 
 
@@ -165,6 +181,13 @@ let foods = [
 
 // CODE HERE
 
+const riceFoods = foods.filter(food => {
+  return food["tags"].includes("rice")
+})
+console.log(riceFoods)
 
 // THE TOTAL
+// is 36
 
+const totalPriceRice = riceFoods.reduce((acc, curr) => acc + curr.price, 0)
+console.log(totalPriceRice)
