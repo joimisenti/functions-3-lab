@@ -191,3 +191,11 @@ console.log(riceFoods)
 
 const totalPriceRice = riceFoods.reduce((acc, curr) => acc + curr.price, 0)
 console.log(totalPriceRice)
+
+// To chain them together
+const totalPriceRiceFoods = foods.filter((food) => {
+  return food["tags"].includes("rice")
+}).reduce((acc, curr) => {
+  return acc + curr.price
+}, 0)
+console.log(totalPriceRiceFoods)
